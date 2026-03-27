@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reserva tu clase de batería</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 40px;
+      background: #111;
+      color: white;
+    }
+
+    input, button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background: #25D366;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🥁 Reserva tu clase de batería</h1>
+  	<p>Clases personalizadas para todos los niveles</p>
+
+  <input type="text" id="nombre" placeholder="Tu nombre">
+  <input type="date" id="fecha">
+  <input type="time" id="hora">
+
+  <button onclick="reservar()">Agendar clase ahora</button>
+
+  <script>
+    function reservar() {
+      const nombre = document.getElementById("nombre").value;
+      const fecha = document.getElementById("fecha").value;
+      const hora = document.getElementById("hora").value;
+
+      if (!nombre || !fecha || !hora) {
+        alert("Completa todos los campos");
+        return;
+      }
+
+      const mensaje = `Hola! Quiero agendar una clase de batería 🥁
+Nombre: ${nombre}
+Fecha: ${fecha}
+Hora: ${hora}`;
+
+      const numero = "56993072767";
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+      alert("Serás redirigido a WhatsApp para confirmar tu reserva");
+
+      window.open(url, "_blank");
+    }
+      const hoy = new Date().toISOString().split("T")[0];
+      document.getElementById("fecha").setAttribute("min", hoy);
+  </script>
+
+</body>
+</html>
