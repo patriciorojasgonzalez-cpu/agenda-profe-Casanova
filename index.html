@@ -29,7 +29,29 @@
   </style>
 </head>
 <body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMsSCMbBO2cUeTC9vc_U4IK_N9g3mPIR8",
+    authDomain: "agenda-profe-casanova.firebaseapp.com",
+    projectId: "agenda-profe-casanova",
+    storageBucket: "agenda-profe-casanova.firebasestorage.app",
+    messagingSenderId: "538652065887",
+    appId: "1:538652065887:web:f85d1c84ad7fca8e3a1bea",
+    measurementId: "G-881T2ND90R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   <h1>🥁 Reserva tu clase de batería</h1>
   	<p>Clases personalizadas para todos los niveles</p>
 
